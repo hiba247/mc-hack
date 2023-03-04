@@ -27,6 +27,7 @@ def index2(request):
         importances = model.feature_importances_
         result = [(float(x) - y)*z for x, y,z in zip(item[0], xmean,importances)]
         err = result.index(max(result))
+        solut=solution.objects.values_list('solu', flat=True).get(prblm=err)
 
     temp  =etat.objects.filter(year=current_year).values('mounth').annotate(avg_temp=Avg('temperateur'))
     temperateur = [0,0,0,0,0,0,0,0,0,0,0,0]
@@ -67,8 +68,8 @@ def index2(request):
 
 
 
-    context = {'last':last ,'pressure': pressure, 'temperateur':temperateur,'level':level,'flow':flow,'vibrating':vibrating,'gas':gas,'err':err}
-    return render(request, 'pages/index.html',context)
+    context = {'last':last ,'pressure': pressure, 'temperateur':temperateur,'level':level,'flow':flow,'vibrating':vibrating,'gas':gas,'err':err,'solu':solut}
+    return render(request, 'pages/index2.html',context)
 
 
 @login_required

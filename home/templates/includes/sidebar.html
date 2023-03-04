@@ -27,7 +27,15 @@
             <span class="pc-micon"><i class="ti ti-dashboard"></i></span>
             <span class="pc-mtext">Dashboard</span></a>
         </li>
-       
+        <li class="pc-item">
+          {% if request.user.is_superuser %}
+          <a href="{% url 'index2' %}" class="pc-link">
+          {% else %}
+          <a href="/" class="pc-link">
+          {% endif %}
+            <span class="pc-micon"><i class="ti ti-dashboard"></i></span>
+            <span class="pc-mtext">Detail</span></a>
+        </li>
 
         {% admin_get_menu as app_list %}
         {% if app_list %}

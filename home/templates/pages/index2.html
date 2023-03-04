@@ -163,7 +163,9 @@
 
 
 
-        <div class="col-xl-12 col-md-12">
+       
+        {% if err%}
+        <div class="col-xl-9 col-md-12">
           <div class="card">
             <div class="card-body">
               
@@ -171,6 +173,24 @@
             </div>
           </div>
         </div>
+        <div class="col-xl-3 col-md-12">
+          <div class="card">
+            <div class="card-body">
+              
+              <div>{{solu}}</div>
+            </div>
+          </div>
+        </div>
+        {%else%}
+        <div class="col-xl-9 col-md-12">
+          <div class="card">
+            <div class="card-body">
+              
+              <div id="growthchart2"></div>
+            </div>
+          </div>
+        </div>
+        {%endif%}
 
         <!-- [ sample-page ] end -->
       </div>
@@ -210,7 +230,7 @@ function floatchart() {
   (function () {
     var options = {
       chart: {
-        type: 'line',
+        type: 'bar',
         height: 480,
         stacked: false,
         toolbar: {
@@ -268,6 +288,13 @@ function floatchart() {
       xaxis: {
         type: 'category',
         categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      },
+      yaxis: {
+        labels: {
+          formatter: function (value) {
+            return Math.round(value);
+          }
+        }
       },
       grid: {
         strokeDashArray: 4
