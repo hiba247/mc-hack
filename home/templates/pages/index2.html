@@ -1,0 +1,286 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %} Dashboard {% endblock title %}
+{% block content %}
+  <!-- [ Main Content ] start -->
+  <div class="pc-container">
+    <div class="pc-content">
+      <!-- [ Main Content ] start -->
+      <div class="row">
+        <!-- [ sample-page ] start -->
+        
+        {% if err == 0 %}
+        <div class="col-xl-2 col-md-4">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" style=" background: #da361c !important;">
+        {% else%}
+        <div class="col-xl-2 col-md-4">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" >
+        {% endif %}
+            <span class="round small"></span>
+            <span class="round big"></span>
+            <div class="card-body">
+              
+              <div class="tab-content" id="chart-tab-tabContent">
+                
+                <div class="tab-pane show active" id="chart-tab-profile" role="tabpanel" aria-labelledby="chart-tab-profile-tab" tabindex="0">
+                  <div class="row">
+                    <div class="col-12">
+                      <span class="text-white d-block f-34 f-w-500 my-2">{{last.pressure }}</span>
+                      <p class="mb-0 opacity-50">Pressure </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% if err == 1 %}
+        <div class="col-xl-2 col-md-4">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" style=" background: #da361c !important;">
+        {% else%}
+        <div class="col-xl-2 col-md-4">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" >
+        {% endif %}
+            <span class="round big"></span>
+            <div class="card-body">
+              
+              <div class="tab-content" id="chart-tab-tabContent">
+                
+                <div class="tab-pane show active" id="chart-tab-profile" role="tabpanel" aria-labelledby="chart-tab-profile-tab" tabindex="0">
+                  <div class="row">
+                    <div class="col-12">
+                      <span class="text-white d-block f-34 f-w-500 my-2">{{last.temperateur }}</span>
+                      <p class="mb-0 opacity-50">Temperature </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% if err == 2 %}
+        <div class="col-xl-2 col-md-4">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" style=" background: #da361c !important;">
+        {% else%}
+        <div class="col-xl-2 col-md-4">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" >
+        {% endif %}
+            <span class="round big"></span>
+            <div class="card-body">
+              
+              <div class="tab-content" id="chart-tab-tabContent">
+                
+                <div class="tab-pane show active" id="chart-tab-profile" role="tabpanel" aria-labelledby="chart-tab-profile-tab" tabindex="0">
+                  <div class="row">
+                    <div class="col-12">
+                      <span class="text-white d-block f-34 f-w-500 my-2">{{last.flow}} </span>
+                      <p class="mb-0 opacity-50">Flow</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% if err == 3 %}
+        <div class="col-xl-2 col-md-4">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" style=" background: #da361c !important;">
+        {% else%}
+        <div class="col-xl-2 col-md-4">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" >
+        {% endif %}
+            <span class="round big"></span>
+            <div class="card-body">
+              
+              <div class="tab-content" id="chart-tab-tabContent">
+                
+                <div class="tab-pane show active" id="chart-tab-profile" role="tabpanel" aria-labelledby="chart-tab-profile-tab" tabindex="0">
+                  <div class="row">
+                    <div class="col-12">
+                      <span class="text-white d-block f-34 f-w-500 my-2">{{last.level}}</span>
+                      <p class="mb-0 opacity-50">Level</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% if err == 4 %}
+        <div class="col-xl-2 col-md-4">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" style=" background: #da361c !important;">
+        {% else%}
+        <div class="col-xl-2 col-md-4">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" >
+        {% endif %}
+            <span class="round big"></span>
+            <div class="card-body">
+              
+              <div class="tab-content" id="chart-tab-tabContent">
+                
+                <div class="tab-pane show active" id="chart-tab-profile" role="tabpanel" aria-labelledby="chart-tab-profile-tab" tabindex="0">
+                  <div class="row">
+                    <div class="col-12">
+                      <span class="text-white d-block f-34 f-w-500 my-2">{{last.gas}}</span>
+                      <p class="mb-0 opacity-50">Gas</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% if err == 5 %}
+        <div class="col-xl-2 col-md-4">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" style=" background: #da361c !important;">
+        {% else%}
+        <div class="col-xl-2 col-md-4">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" >
+        {% endif %}
+            <span class="round big"></span>
+            <div class="card-body">
+              
+              <div class="tab-content" id="chart-tab-tabContent">
+                
+                <div class="tab-pane show active" id="chart-tab-profile" role="tabpanel" aria-labelledby="chart-tab-profile-tab" tabindex="0">
+                  <div class="row">
+                    <div class="col-12">
+                      <span class="text-white d-block f-34 f-w-500 my-2">{{last.vibration}}</span>
+                      <p class="mb-0 opacity-50">Vibration</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+     
+
+
+
+        <div class="col-xl-12 col-md-12">
+          <div class="card">
+            <div class="card-body">
+              
+              <div id="growthchart2"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [ sample-page ] end -->
+      </div>
+      <!-- [ Main Content ] end -->
+    </div>
+  </div>
+  <!-- [ Main Content ] end -->
+{% endblock content %}
+
+{% block extra_js %}
+  <!-- Apex Chart -->
+  <script src="{% static 'assets/js/plugins/apexcharts.min.js' %}"></script>
+  <script src="{% static 'assets/js/pages/dashboard-default.js' %}"></script>
+  <!-- [Page Specific JS] end -->
+
+  <script>
+    var temperateur = {{ temperateur|safe }}
+    var pressure ={{ pressure|safe }}
+  
+    var flow ={{ flow|safe }}
+    var level = {{ level|safe }}
+    var vibration ={{ vibrating|safe }}
+    var gas ={{ gas|safe }}
+  document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+      floatchart();
+      const parentElement = document.getElementById('growthchart2');
+      const childElements = parentElement.children;
+      const secondDivElement = childElements[1];
+      secondDivElement.style.display = 'none'
+    }, 500);
+  });
+
+
+
+function floatchart() {
+  (function () {
+    var options = {
+      chart: {
+        type: 'line',
+        height: 480,
+        stacked: false,
+        toolbar: {
+          show: false
+        }
+      },
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          columnWidth: '50%'
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      colors: [ '#000080', '#673ab7','#a2a2d0', '#8ab9f1','#2196f3', '#1c39bb'],
+      series: [
+        {
+          name: 'temperateur',
+          data: temperateur
+        },
+        {
+          name: 'flow',
+          data: flow
+        },
+        {
+          name: 'gas',
+          data: gas
+        },
+        {
+          name: 'vibration',
+          data: vibration
+        },
+        {
+          name: 'pressure',
+          data: pressure
+        },
+        {
+          name: 'level',
+          data: level
+        }
+      ],
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            legend: {
+              position: 'bottom',
+              offsetX: -10,
+              offsetY: 0
+            }
+          }
+        }
+      ],
+      xaxis: {
+        type: 'category',
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      },
+      grid: {
+        strokeDashArray: 4
+      },
+      tooltip: {
+        theme: 'dark'
+      }
+    };
+    var chart = new ApexCharts(document.querySelector('#growthchart2'), options);
+    chart.render();
+  })();
+}
+  
+
+  </script>
+{% endblock extra_js %}

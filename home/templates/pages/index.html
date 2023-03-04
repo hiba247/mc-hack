@@ -9,9 +9,13 @@
       <!-- [ Main Content ] start -->
       <div class="row">
         <!-- [ sample-page ] start -->
-        
+        {% if err == 0 %}
         <div class="col-xl-2 col-md-4">
-          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" style=" background: #da361c !important;">
+        {% else%}
+        <div class="col-xl-2 col-md-4">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" >
+        {% endif %}
             <span class="round small"></span>
             <span class="round big"></span>
             <div class="card-body">
@@ -22,7 +26,7 @@
                   <div class="row">
                     <div class="col-12">
                       <span class="text-white d-block f-34 f-w-500 my-2">{{last.pressure }}</span>
-                      <p class="mb-0 opacity-50">pressure </p>
+                      <p class="mb-0 opacity-50"><i class="fa-regular fa-tire-pressure-warning"></i> Pressure </p>
                     </div>
                   </div>
                 </div>
@@ -30,9 +34,13 @@
             </div>
           </div>
         </div>
+        {% if err == 1 %}
         <div class="col-xl-2 col-md-4">
-          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden">
-            <span class="round small"></span>
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" style=" background: #da361c !important;">
+        {% else%}
+        <div class="col-xl-2 col-md-4">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" >
+        {% endif %}
             <span class="round big"></span>
             <div class="card-body">
               
@@ -42,7 +50,7 @@
                   <div class="row">
                     <div class="col-12">
                       <span class="text-white d-block f-34 f-w-500 my-2">{{last.temperateur }}</span>
-                      <p class="mb-0 opacity-50">temperateur </p>
+                      <p class="mb-0 opacity-50"><i class="fa-solid fa-temperature-quarter"></i> Temperature </p>
                     </div>
                   </div>
                 </div>
@@ -50,9 +58,13 @@
             </div>
           </div>
         </div>
+        {% if err == 2 %}
         <div class="col-xl-2 col-md-4">
-          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden">
-            <span class="round small"></span>
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" style=" background: #da361c !important;">
+        {% else%}
+        <div class="col-xl-2 col-md-4">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" >
+        {% endif %}
             <span class="round big"></span>
             <div class="card-body">
               
@@ -62,7 +74,7 @@
                   <div class="row">
                     <div class="col-12">
                       <span class="text-white d-block f-34 f-w-500 my-2">{{last.flow}} </span>
-                      <p class="mb-0 opacity-50">flow</p>
+                      <p class="mb-0 opacity-50"><i class="fa-light fa-flower"></i> Flow</p>
                     </div>
                   </div>
                 </div>
@@ -70,9 +82,13 @@
             </div>
           </div>
         </div>
+        {% if err == 3 %}
         <div class="col-xl-2 col-md-4">
-          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden">
-            <span class="round small"></span>
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" style=" background: #da361c !important;">
+        {% else%}
+        <div class="col-xl-2 col-md-4">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" >
+        {% endif %}
             <span class="round big"></span>
             <div class="card-body">
               
@@ -82,7 +98,7 @@
                   <div class="row">
                     <div class="col-12">
                       <span class="text-white d-block f-34 f-w-500 my-2">{{last.level}}</span>
-                      <p class="mb-0 opacity-50">level</p>
+                      <p class="mb-0 opacity-50"><i class="fa-solid fa-turn-up"></i> Level</p>
                     </div>
                   </div>
                 </div>
@@ -90,9 +106,13 @@
             </div>
           </div>
         </div>
+        {% if err == 4 %}
         <div class="col-xl-2 col-md-4">
-          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden">
-            <span class="round small"></span>
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" style=" background: #da361c !important;">
+        {% else%}
+        <div class="col-xl-2 col-md-4">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" >
+        {% endif %}
             <span class="round big"></span>
             <div class="card-body">
               
@@ -102,7 +122,7 @@
                   <div class="row">
                     <div class="col-12">
                       <span class="text-white d-block f-34 f-w-500 my-2">{{last.gas}}</span>
-                      <p class="mb-0 opacity-50">gas</p>
+                      <p class="mb-0 opacity-50"><i class="fa-solid fa-gas-pump"></i> Gas</p>
                     </div>
                   </div>
                 </div>
@@ -110,9 +130,13 @@
             </div>
           </div>
         </div>
+        {% if err == 5 %}
         <div class="col-xl-2 col-md-4">
-          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden">
-            <span class="round small"></span>
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" style=" background: #da361c !important;">
+        {% else%}
+        <div class="col-xl-2 col-md-4">
+          <div class="card bg-primary-dark dashnum-card text-white overflow-hidden" >
+        {% endif %}
             <span class="round big"></span>
             <div class="card-body">
               
@@ -122,7 +146,7 @@
                   <div class="row">
                     <div class="col-12">
                       <span class="text-white d-block f-34 f-w-500 my-2">{{last.vibration}}</span>
-                      <p class="mb-0 opacity-50">vibration</p>
+                      <p class="mb-0 opacity-50"><i class="fa-solid fa-virus"></i> Vibration</p>
                     </div>
                   </div>
                 </div>
@@ -137,8 +161,8 @@
      
 
 
-
-        <div class="col-xl-12 col-md-12">
+        {% if err%}
+        <div class="col-xl-9 col-md-12">
           <div class="card">
             <div class="card-body">
               
@@ -146,6 +170,24 @@
             </div>
           </div>
         </div>
+        <div class="col-xl-3 col-md-12">
+          <div class="card">
+            <div class="card-body">
+              
+              <div>{{solu}}</div>
+            </div>
+          </div>
+        </div>
+        {%else%}
+        <div class="col-xl-9 col-md-12">
+          <div class="card">
+            <div class="card-body">
+              
+              <div id="growthchart2"></div>
+            </div>
+          </div>
+        </div>
+        {%endif%}
 
         <!-- [ sample-page ] end -->
       </div>
@@ -164,7 +206,6 @@
   <script>
     var temperateur = {{ temperateur|safe }}
     var pressure ={{ pressure|safe }}
-  
     var flow ={{ flow|safe }}
     var level = {{ level|safe }}
     var vibration ={{ vibrating|safe }}
@@ -199,9 +240,9 @@ function floatchart() {
         }
       },
       dataLabels: {
-        enabled: false
+        enabled: true
       },
-      colors: [ '#2196f3', '#673ab7','#2196f3', '#673ab7','#2196f3', '#673ab7'],
+      colors: [ '#000080', '#673ab7','#a2a2d0', '#8ab9f1','#2196f3', '#1c39bb'],
       series: [
         {
           name: 'temperateur',
@@ -242,7 +283,14 @@ function floatchart() {
       ],
       xaxis: {
         type: 'category',
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        categories: []
+      },
+      yaxis: {
+        labels: {
+          formatter: function (value) {
+            return Math.round(value);
+          }
+        }
       },
       grid: {
         strokeDashArray: 4

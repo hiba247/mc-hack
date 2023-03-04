@@ -9,3 +9,15 @@ class etat(models.Model):
     level = models.FloatField()
     gas = models.FloatField()
     vibration = models.FloatField()
+
+class solution(models.Model):
+    solu=models.TextField()
+    prblm = models.IntegerField()
+
+class percontage(models.Model):
+    pressure = models.FloatField()
+    temperateur = models.FloatField()
+    flow = models.FloatField()
+    level = models.FloatField()
+    gas = models.FloatField()
+    vibration = models.FloatField()

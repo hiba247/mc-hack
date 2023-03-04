@@ -4,3 +4,5 @@ from .models import *
 
 
 admin.site.register(etat)
+admin.site.register(percontage)
+admin.site.register(solution)
